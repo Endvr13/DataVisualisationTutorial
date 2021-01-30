@@ -43,3 +43,15 @@ class RandomWalk:
 
 
 
+
+    def get_step(self):
+        # Decide which direction to go and how far
+        direction = choice([1, -1])
+        distance = choice([0, 1, 2, 3, 4, 5, 6, 7, 8])
+        step = direction * distance
+        return step
+
+
+
+
+
