@@ -12,21 +12,15 @@ while True:
     plt.style.use('fivethirtyeight')
     fig, ax = plt.subplots(figsize=(20, 12), dpi=82)
     point_numbers = range(rw.num_points)
-
     ax.plot(rw.x_values, rw.y_values, c='red', lw=1)
+
     # Emphasise first and last points
     ax.plot(0, 0)
     ax.plot(rw.x_values[-1], rw.y_values[-1])
 
     # Remove axes
-
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
 
     plt.show()
-
     keep_running = input("Make another walk? (y/n): ")
-    if keep_running == 'n':
-        break
-    elif keep_running == 'y':
-        continue
